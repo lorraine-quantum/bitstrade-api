@@ -17,8 +17,9 @@ const connect = require('connect-pg-simple')
 const session = require('express-session')
 const UserSchema = require('./models/UserModel')
 const origin = [
-  'http://localhost:5173'
-
+  'http://localhost:3111',
+  'https://bitstrade-admin.vercel.app',
+  'https://bitstradestation.com'
 ]
 app.use(cors({
   origin
