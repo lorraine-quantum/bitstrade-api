@@ -18,6 +18,7 @@ const session = require('express-session')
 const UserSchema = require('./models/UserModel')
 const origin = [
   'http://localhost:3111',
+  'http://localhost:5173',
   'https://bitstrade-admin.vercel.app',
   'https://bitstradestation.com'
 ]

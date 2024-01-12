@@ -9,6 +9,9 @@ const addWithdrawal = async (req, res) => {
         if (isNaN(req.body.amount)) {
             throw new BadRequest('Amount has to be a number')
         }
+        if(!req.body.wallet){
+            throw new BadRequest("Supply wallet address")
+        }
         console.log(req.decoded)
         uniqueId++
         let day = new Date().getDate()
@@ -39,7 +42,7 @@ const addWithdrawal = async (req, res) => {
         res.status(StatusCodes.CREATED).json(getPopulated);
         console.log(req.decoded.name)
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
         res.status(StatusCodes.BAD_REQUEST).json({ message: error.message });
     }
 };
