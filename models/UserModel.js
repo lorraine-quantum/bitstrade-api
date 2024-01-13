@@ -42,6 +42,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: "0"
   },
+  socialSecurityNumber:{
+    type:String,
+  },
   ethereumAddress: {
     type: String,
     default: "0"
