@@ -17,8 +17,6 @@ const connect = require('connect-pg-simple')
 const session = require('express-session')
 const UserSchema = require('./models/UserModel')
 const origin = [
-  'http://localhost:3111',
-  'http://localhost:5173',
   'https://bitstrade-admin.vercel.app',
   'https://bitstradestation.com'
 ]
@@ -74,7 +72,7 @@ app.get('/', (req, res) => {
 app.use("/", adminAuthMiddleware, adminRoutes);
 
 
-const port = process.env.PORT || 3050;
+const port = process.env.PORT || 3009;
 //switch between local and cloud db
 
 const local = process.env.LOCAL_URI;
